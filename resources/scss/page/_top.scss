@@ -1,7 +1,33 @@
-.test {
-    color: blue;
+@use '../base/vars' as *;
 
-    .red {
-        color: red;
+.test {
+    color: $font-color;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.section01 {
+    .title {
+        color: $accent-color;
+
+        @include media_query(640) {
+            color: $font-color;
+        }
     }
+}
+
+.section02 {
+    .title {
+        color: $font-color;
+    }
+
+    &::after {}
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+
 }
