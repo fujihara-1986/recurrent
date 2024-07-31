@@ -1,7 +1,22 @@
-.test {
-    color: blue;
+@use "../base/vars"as*;
 
-    .red {
-        color: red;
+
+.test {
+    color: $accent-color;
+}
+.title{
+    font-size: 20px;
+}
+.a{
+    .title{
+        color: $base-color;
+    }
+}
+.b{
+    .title{
+        color: $bg-color;
+    }
+    &::after{
+        content: "";
     }
 }
