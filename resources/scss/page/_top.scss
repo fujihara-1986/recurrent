@@ -1,7 +1,42 @@
-.test {
-    color: blue;
+@use '../base/vars'as *;
 
-    .red {
-        color: red;
+
+.test {
+    color: $accent-color;
+}
+
+.title{
+    font-size: 20px;
+}
+
+.section01{
+    .title{
+        color: $accent-color;
     }
+}
+
+.section02{
+    .title{
+        color: $font-color;
+
+        @include media_query(1000){
+            color: $main-color;
+        }
+    }
+
+    &::after{
+
+    }
+
+    &:nth-child(1){
+        
+    }
+
+    &:hover{
+
+    }
+}
+
+.img{
+    width: 100%;
 }
