@@ -5,21 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./common/css/style.css">
     <title>TOPページ</title>
+    <!-- フォント読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p class="test">
-        tsuemoto
-    </p>
-    <section class="a">
-        <h1 class="title">タイトル</h1>
+    <div class="kv_list">
+        <div class="kv_list-item">
+            <picture>
+                <source media="(max-width:768px)" type="image/png" srcset="./common/image/kv_sp.png">
+                <source media="(min-width:769px)" type="image/png" srcset="./common/image/kv.png">
+                <img src="./common/image/kv.png" alt="kv1">
+            </picture>
+            <a class="morebtn" href="#">商品ページを見る</a>
+        </div>
+        <div class="kv_list-item">
+            <picture>
+                <source media="(max-width:768px)" type="image/png" srcset="./common/image/kv2_sp.png">
+                <source media="(min-width:769px)" type="image/png" srcset="./common/image/kv2.png">
+                <img src="./common/image/kv2.png" alt="kv2">
+            </picture>
+            <a class="morebtn" href="#">商品ページを見る</a>
+        </div>
+        <div class="kv_list-item">
+            <picture>
+                <source media="(max-width:768px)" type="image/png" srcset="./common/image/kv3_sp.png">
+                <source media="(min-width:769px)" type="image/png" srcset="./common/image/kv3.png">
+                <img src="./common/image/kv3.png" alt="kv3">
+            </picture>
+            <a class="morebtn" href="#">商品ページを見る</a>
+        </div>
+        <div class="kv_list-item">
+            <picture>
+                <source media="(max-width:768px)" type="image/png" srcset="./common/image/kv4_sp.png">
+                <source media="(min-width:769px)" type="image/png" srcset="./common/image/kv4.png">
+                <img src="./common/image/kv4.png" alt="kv4">
+            </picture>
+            
+        </div>
+    </div>
+    <section class="lead">
+        <div class="lead_title">
+            <img src="./common/image/lead_title.svg" alt="大人✗G-SHOCK">
+        </div>
+       <div class="lead_wrap">
+            <div class="lead_textbox">
+                <h2 class="lead_subtitle">大人になったあなたに、<br> MR-Gというご提案。</h2>
+                <h3 class="lead_subtitle2">初めてG-SHOCKを手にした瞬間を、 <br>覚えていますか？</h3>
+                <p class="lead_text">
+                    初めてG-SHOCKを手に入れた時の高揚感。 <br>
+                    タフな相棒を腕に巻き、海に山に、学校、ドライブ、クラブ、 <br>
+                    デート…日常の全ての時を共に刻んだ日々を覚えていますか？ <br>
+                    大人になりスーツを着る機会が増えた。 <br>
+                    後輩や年下の手前、カジュアルな時計は着けづらくなった。 <br>
+                    そんな大人のG-SHOCKファンにこそ身につけてほしい。 <br>
+                    あなたにぴったりな最高峰のMR-Gが、ここにあります。
+                </p>
+            </div>
+            <div class="lead_img">
+                <picture>
+                    <source media="(max-width:768px)" type="image/png" srcset="./common/image/lead_sp.png">
+                    <source media="(min-width:769px)" type="image/png" srcset="./common/image/lead.png">
+                    <img src="./common/image/lead.png" alt="黒いG-SHOCK">
+                </picture>
+            </div>
+       </div>
     </section>
-    <section class="b">
-        <h1 class="title">タイトル</h1>
+    <section class="snap">
+        <div class="snap_title">
+            <img src="./common/image/snap_title.svg" alt="SNAP">
+        </div>
+        <div class="title_ja">スナップ</div>
+        <div class="snap_list">
+            <div class="snap_list-item">
+                <div class="snap_img">
+                    <picture>
+                        <source media="(max-width:768px)" type="image/png" srcset="./common/image/snap1_sp.png">
+                        <source media="(min-width:769px)" type="image/png" srcset="./common/image/snap1.png">
+                        <img src="./common/image/snap1.png" alt="MRG-B5000D">
+                    </picture>
+                </div>
+                <div class="snap_kind">
+                    <p class="snap_case">business</p>
+                    <div class="snap_time">
+                        <img src="./common/image/snap_time1.svg" alt="18:25">
+                    </div>
+                    <p>Monday.</p>
+                </div>
+            </div>
+            <div class="snap_list-item">
+                <div class="snap_img">
+                    <picture>
+                        <source media="(max-width:768px)" type="image/png" srcset="./common/image/snap2_sp.png">
+                        <source media="(min-width:769px)" type="image/png" srcset="./common/image/snap2.png">
+                        <img src="./common/image/snap2.png" alt="MRG-B5000B">
+                    </picture>
+                </div>
+                <div class="snap_kind">
+                    <p class="snap_case">activity</p>
+                    <div class="snap_time">
+                        <img src="./common/image/snap_time2.svg" alt="10:50">
+                    </div>
+                    <p>Wednesday.</p>
+                </div>
+            </div>
+            <div class="snap_list-item">
+                <div class="snap_img">
+                    <picture>
+                        <source media="(max-width:768px)" type="image/png" srcset="./common/image/snap3_sp.png">
+                        <source media="(min-width:769px)" type="image/png" srcset="./common/image/snap3.png">
+                        <img src="./common/image/snap3.png" alt="MRG-BF1000R">
+                    </picture>
+                </div>
+                <div class="snap_kind">
+                    <p class="snap_case">town</p>
+                    <div class="snap_time">
+                        <img src="./common/image/snap_time3.svg" alt="15:10">
+                    </div>
+                    <p>Saturday.</p>
+                </div>
+            </div>
+            <div class="snap_list-item">
+                <div class="snap_img">
+                    <picture>
+                        <source media="(max-width:768px)" type="image/png" srcset="./common/image/snap4_sp.png">
+                        <source media="(min-width:769px)" type="image/png" srcset="./common/image/snap4.png">
+                        <img src="./common/image/snap4.png" alt="MRG-B2000B">
+                    </picture>
+                </div>
+                <div class="snap_kind">
+                    <p class="snap_case">holiday</p>
+                    <div class="snap_time">
+                        <img src="./common/image/snap_time4.svg" alt="19:45">
+                    </div>
+                    <p>Sunday.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <picture>
-        <source media="(max-width:768px)" type="image/png" srcset="/public/common/image/kv_sp.png">
-        <source media="(min-width:769px)" type="image/png" srcset="/public/common/image/kv.png">
-        <img src="/public/common/image/kv.png" alt="">
-    </picture>
+
 </body>
 </html>

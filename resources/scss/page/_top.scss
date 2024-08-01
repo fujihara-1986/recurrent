@@ -20,3 +20,133 @@
         content: "";
     }
 }
+
+// kv
+
+.kv_list{
+    display: flex;
+
+    .kv_list-item{
+
+        picture{
+            position: relative;
+            
+        }
+        .morebtn{
+            position: absolute;
+            top: 74%;
+            left: 73%;
+            padding: 0 42px 10.5px 0;
+            color: $base-color;
+            font-size: 14px;
+            font-weight:lighter;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid $base-color;
+
+            &::after{
+                content: "";
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                margin-right: 12px;
+                background: url(../../../public/common/image/arrow_right.png) center center no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+// lead
+
+.lead{
+    position: relative;
+
+    .lead_title{
+        position: absolute;
+        top: -5%;
+        left: 1%;
+        }
+    .lead_wrap{
+        display: flex;
+        gap: 45px;
+        justify-content: space-between;
+        align-items: center;
+
+        .lead_textbox{
+            margin: 342px 0 0 10%;
+            width: 45%;
+
+            .lead_subtitle{
+                font-size: 36px;
+                font-weight: normal;
+                letter-spacing: 0.5rem;
+                margin-top: 107px;
+            }
+            .lead_subtitle2{
+                font-size: 20px;
+                font-weight: normal;
+                letter-spacing: 0.2rem;
+                margin-top: 50px;
+            }
+            .lead_text{
+                font-size: 15px;
+                line-height: 2;
+                margin-top: 30px;
+            }
+        }
+        .lead_img{
+            width: 50%;
+            
+            img{
+                width: 100%;
+            }
+        }
+    
+    }
+}
+
+// snap
+
+.snap{
+    margin-top: 117px;
+    .snap_title{
+        text-align: center;
+    }
+    .title_ja{
+        text-align: center;
+        margin: 30px 0 50px;
+    }
+    .snap_list{
+        display: flex;
+        gap: 10px;
+        position: absolute;
+
+        &::after{
+            content: "";
+            width: 1300px;
+            height: 480px;
+            position: absolute;
+            top: 40%;
+            left: -30%;
+            border: 10px solid $font-color;
+            z-index: -10;
+        }
+        .snap_list-item{
+
+            &:nth-child(2n){
+                margin-top: 85px;
+            }
+            .snap_kind{
+                text-align: center;
+                margin-top: 37px;
+
+                .snap_case{
+                    text-transform: uppercase;
+                }
+                .snap_time{
+                    margin: 15px 0;
+                }
+            }
+        }
+    }
+}
