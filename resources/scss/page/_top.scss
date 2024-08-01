@@ -31,3 +31,30 @@
     }
 
 }
+
+
+.kv {
+
+    position: relative;
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+
+    .link {
+        width: 12%;
+        height: auto;
+        position: absolute;
+        bottom: 15%;
+        right: 14%;
+        z-index: 1;
+
+        @include media_query(780) {
+            width: 30%;
+            bottom: 5%;
+            right: 5%;
+        }
+    }
+
+}
