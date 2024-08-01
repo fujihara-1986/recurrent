@@ -4,25 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./common/css/style.css">
     <title>TOPページ</title>
 </head>
 
 <body>
-    <div class="kv">
+
+    <header>
         <picture>
-            <source media="(max-width:780px)" type="image/png" srcset="./common/img/kv_sp.png">
-            <source media="(min-width:769px)" type="image/png" srcset="./common/img/kv.png">
-            <img class="img" src="common/img/kv.png" alt="キービジュアル">
+            <source media="(max-width:789px)" type="image/png" srcset="./common/img/header_sp.png">
+            <source media="(max-width:769px)" type="image/png" srcset="./common/img/header.png">
+            <img class="img" src="./common/img/header.png" alt="ヘッダー">
         </picture>
-        <a href="#">
+    </header>
+
+    <main>
+        <div class="kv">
             <picture>
-                <source media="(max-width:780px)" type="image/png" srcset="./common/img/link_sp.png">
-                <source media="(min-width:769px)" type="image/png" srcset="./common/img/link.png">
-                <img class="link" src="./common/img/link.png" alt="リンク">
+                <source media="(max-width:780px)" type="image/png" srcset="./common/img/kv_sp.png">
+                <source media="(min-width:769px)" type="image/png" srcset="./common/img/kv.png">
+                <img class="img" src="./common/img/kv.png" alt="キービジュアル">
             </picture>
-        </a>
-    </div>
+            <a href="#">
+                <picture>
+                    <source media="(max-width:780px)" type="image/png" srcset="./common/img/link_sp.png">
+                    <source media="(min-width:769px)" type="image/png" srcset="./common/img/link.png">
+                    <img class="link" src="./common/img/link.png" alt="リンク">
+                </picture>
+            </a>
+        </div>
+
+        <section class="sec01">
+            <h1><img class="h1" src="./common/img/title.svg" alt="大人　G-SHOCK"></h1>
+            <div class="flex">
+                <div class="txt">
+                    <p>大人になったあなたに、<br>MR-Gというご提案。</p>
+                    <p>初めてG-SHOCKを手にした瞬間を、<br>覚えていますか？</p>
+                    <p>初めてG-SHOCKを手に入れた時の高揚感。<br>
+                        タフな相棒を腕に巻き、海に山に、学校、ドライブ、クラブ、
+                        デート…日常の全ての時を共に刻んだ日々を覚えていますか？<br>
+                        大人になりスーツを着る機会が増えた。<br>
+                        後輩や年下の手前、カジュアルな時計は着けづらくなった。<br>
+                        そんな大人のG-SHOCKファンにこそ身につけてほしい。<br>
+                        あなたにぴったりな最高峰のMR-Gが、ここにあります。
+                    </p>
+                </div>
+                <img class="img" src="./common/img/watch_1.png" alt="">
+            </div>
+        </section>
+
+        <section class="sec02">
+            <h2><img src="./common/img/snap.svg" alt="スナップ"></h2>
+            <p>スナップ</p>
+            <div class="watch_list">
+                <div class="watch">
+                    <img src="./common/img/watch_2.png" alt="">
+                    <img class="time" src="./common/img/time_1.png" alt="">
+                </div>
+                <div class="watch">
+                    <img src="./common/img/watch_3.png" alt="">
+                    <img class="time" src="./common/img/time_2.png" alt="">
+                </div>
+                <div class="watch">
+                    <img src="./common/img/watch_4.png" alt="">
+                    <img class="time" src="./common/img/time_3.png" alt="">
+                </div>
+                <div class="watch">
+                    <img src="./common/img/watch_5.png" alt="">
+                    <img class="time" src="./common/img/time_4.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>

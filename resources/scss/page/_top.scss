@@ -32,19 +32,19 @@
 
 }
 
+/* ================================LP===================================== */
+
+img {
+    width: 100%;
+    height: auto;
+}
 
 .kv {
 
     position: relative;
 
-    .img {
-        width: 100%;
-        height: auto;
-    }
-
     .link {
         width: 12%;
-        height: auto;
         position: absolute;
         bottom: 15%;
         right: 14%;
@@ -56,5 +56,119 @@
             right: 5%;
         }
     }
+}
 
+.sec01 {
+    position: relative;
+
+    .h1 {
+        display: block;
+        width: 50%;
+        margin-top: -20px;
+
+        @include media_query(780) {
+            width: 98%;
+            margin: -20px auto 0;
+        }
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include media_query(780) {
+            flex-direction: column-reverse
+        }
+
+        .img {
+            display: block;
+            width: 60%;
+            margin-top: -20%;
+            z-index: -100;
+
+            @include media_query(780) {
+                width: 80%;
+                margin: -7% 0 0 auto;
+            }
+        }
+
+        .txt {
+            width: 30%;
+            margin-left: 10%;
+            margin-top: 5%;
+
+            @include media_query(780) {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            p {
+                font-size: 36px;
+                line-height: $line-height;
+                letter-spacing: 0.3rem;
+                margin-top: 7%;
+
+                @include media_query(780) {
+                    font-size: 25px;
+                }
+
+                +p {
+                    font-size: 20px;
+                    letter-spacing: 0.1rem;
+
+                    @include media_query(780) {
+                        font-size: 17px;
+                    }
+                }
+
+                &:last-child {
+                    font-size: 15px;
+                    line-height: 3;
+                    width: 83%;
+
+                    @include media_query(780) {
+                        font-size: 14px;
+                        line-height: $line-height;
+                        width: 92%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.sec02 {
+    max-width: 1040px;
+    margin: 0 auto;
+    background-image: url(../../../public/common/img/bag.svgs);
+
+    h2 {
+        width: 20%;
+        margin: 10% auto 0;
+    }
+
+    p {
+        font-size: 17px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .watch_list {
+        display: flex;
+        justify-content: space-evenly;
+
+        .wadtch {
+            &:nth-child(2n) {
+                margin-top: 50px;
+            }
+        }
+
+        .time {
+            display: block;
+            width: 50%;
+            margin: 0 12% 0 auto;
+        }
+    }
 }
