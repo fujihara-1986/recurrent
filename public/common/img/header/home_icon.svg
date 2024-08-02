@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="18" viewBox="0 0 20 18">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_557" data-name="長方形 557" width="20" height="8" transform="translate(-17183 -22703)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_484" data-name="グループ 484" transform="translate(17183 22713)">
+    <path id="多角形_1" data-name="多角形 1" d="M10,0,20,10H0Z" transform="translate(-17183 -22713)"/>
+    <g id="マスクグループ_156" data-name="マスクグループ 156" clip-path="url(#clip-path)">
+      <image id="画像_38" data-name="画像 38" width="20" height="17" transform="translate(-17183 -22712)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAAEQAAAAB6PX+NAAAAkUlEQVQ4Ee2R0Q2AIAxE1TiAoziCo7CZbuIIjuII2lNKlMS2VD+9pDTQu4eGqrJpIttos+ouwLZYr6AdQeYLjKE4w6xICCxUDMk7ZmZor8AYDii8omBYqTikdXgfoUMhjC8DFNmbAu3Y4O1gHAq0eiF5LtQnM60weJQ4jSctZVppGGfp9rgX/+LzL/yBhidSLDun+Fu6U6GOAQAAAABJRU5ErkJggg=="/>
+    </g>
+  </g>
+</svg>
