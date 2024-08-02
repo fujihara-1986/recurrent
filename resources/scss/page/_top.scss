@@ -63,13 +63,9 @@ img {
 
     .h1 {
         display: block;
-        width: 50%;
-        margin-top: -20px;
-
-        @include media_query(780) {
-            width: 98%;
-            margin: -20px auto 0;
-        }
+        width: 58%;
+        margin-top: -30px;
+        padding-left: 20px;
     }
 
     .flex {
@@ -77,20 +73,11 @@ img {
         justify-content: space-between;
         align-items: flex-start;
 
-        @include media_query(780) {
-            flex-direction: column-reverse
-        }
-
         .img {
             display: block;
-            width: 60%;
+            width: 55%;
             margin-top: -20%;
             z-index: -100;
-
-            @include media_query(780) {
-                width: 80%;
-                margin: -7% 0 0 auto;
-            }
         }
 
         .txt {
@@ -98,77 +85,213 @@ img {
             margin-left: 10%;
             margin-top: 5%;
 
-            @include media_query(780) {
-                width: 80%;
-                margin: 0 auto;
-            }
-
             p {
                 font-size: 36px;
                 line-height: $line-height;
                 letter-spacing: 0.3rem;
                 margin-top: 7%;
 
-                @include media_query(780) {
-                    font-size: 25px;
-                }
-
                 +p {
                     font-size: 20px;
                     letter-spacing: 0.1rem;
-
-                    @include media_query(780) {
-                        font-size: 17px;
-                    }
                 }
 
                 &:last-child {
                     font-size: 15px;
                     line-height: 3;
                     width: 83%;
-
-                    @include media_query(780) {
-                        font-size: 14px;
-                        line-height: $line-height;
-                        width: 92%;
-                    }
                 }
-
             }
         }
     }
 }
 
 .sec02 {
-    max-width: 1040px;
+    width: 76%;
     margin: 0 auto;
-    background-image: url(../../../public/common/img/bag.svgs);
 
-    h2 {
-        width: 20%;
-        margin: 10% auto 0;
-    }
+    .snap {
+        position: relative;
 
-    p {
-        font-size: 17px;
-        text-align: center;
-        margin-top: 10px;
-    }
+        h2 {
+            width: 20%;
+            margin: 10% auto 0;
+        }
 
-    .watch_list {
-        display: flex;
-        justify-content: space-evenly;
+        p {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 10px;
+        }
 
-        .wadtch {
-            &:nth-child(2n) {
-                margin-top: 50px;
+        .watch_list {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+
+            .watch {
+
+                &:nth-child(2n) {
+                    margin-top: 50px;
+                }
+            }
+
+            .time {
+                display: block;
+                width: 50%;
+                margin: 10% 17% 0 auto;
             }
         }
 
-        .time {
-            display: block;
-            width: 50%;
-            margin: 0 12% 0 auto;
+        .bg {
+            border: #000 10px solid;
+            width: 1100vw;
+            height: 65%;
+            position: absolute;
+            bottom: -15%;
+            right: 0%;
+            z-index: -1;
         }
+
+    }
+
+    .scene01,
+    .scene02,
+    .scene03,
+    .scene04 {
+        position: relative;
+        margin: 20% auto;
+
+        .scene {
+            width: 15%;
+            position: absolute;
+            top: 8%;
+        }
+
+        .location {
+            width: 68%;
+            position: absolute;
+            top: 20%;
+            left: -5%;
+        }
+
+        .time {
+            width: 20%;
+            position: absolute;
+            top: 55%;
+        }
+
+        p {
+            line-height: 2;
+            letter-spacing: 0.1rem;
+            position: absolute;
+            bottom: 5%;
+        }
+
+        .parts {
+            width: 30%;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            width: 100vw;
+            margin: 0 calc(50% - 50vw);
+
+            .people {
+                width: 43%;
+                z-index: -1;
+            }
+
+            .wat {
+                width: 30%;
+                margin-bottom: -8%;
+                margin-right: -5%;
+            }
+        }
+
+        .number {
+            width: 2%;
+            position: absolute;
+            left: 23%;
+        }
+    }
+
+    .scene02,
+    .scene04 {
+        .scene {
+            left: 50%;
+        }
+
+        .location {
+            left: auto;
+            right: -5%;
+        }
+
+        .time {
+            top: 50%;
+            left: 50%;
+        }
+
+        p {
+            right: 3%;
+        }
+
+        .parts {
+            width: 20%;
+            top: 10%;
+            left: auto;
+            right: 5%;
+        }
+
+        .flex {
+            justify-content: flex-start;
+
+            .wat {
+                margin-right: 0;
+                margin-left: -5%;
+            }
+        }
+
+        .number {
+            left: 75%;
+        }
+    }
+
+    .scene03 {
+        .location {
+            width: 40%;
+            left: -3%;
+        }
+
+        .parts {
+            width: 20%;
+            top: 40%;
+            left: 32%;
+        }
+    }
+
+    .scene04 {
+        .location {
+            width: 65%;
+            left: auto;
+            right: -3%;
+        }
+
+        .parts {
+            width: 20%;
+            top: -15%;
+            left: auto;
+            right: 0%;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        background-color: $bg-color;
     }
 }
