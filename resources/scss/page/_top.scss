@@ -34,10 +34,17 @@
     transform: translateX(-50%);
     overflow-x: hidden;
 }
+
+// レイアウト
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 // kv
 
 .kv_list{
     display: flex;
+    padding-top: 58px;
 
     .kv_list-item{
         position: relative;
@@ -195,7 +202,9 @@
     
     
     .snap_title{
-        text-align: center;
+        width: 200px;
+        margin: 0 auto;
+        
     }
     .title_ja{
         text-align: center;
@@ -214,7 +223,7 @@
             height: 480px;
             position: absolute;
             top: 40%;
-            left: -5%;
+            left: -36%;
             border: 10px solid $font-color;
             z-index: -10;
 
@@ -249,8 +258,98 @@
                     text-transform: uppercase;
                 }
                 .snap_time{
-                    margin: 15px 0;
+                    margin: 15px auto;
+                    width: 90px;
                 }
+            }
+        }
+    }
+    // snap scene
+    .snap_scene01,
+    .snap_scene02{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 216px 0 246px;
+        position: relative;
+
+        .scene_group1{
+            width: 55%;
+
+            .scene_number{
+                width: 135px;
+            }
+            .scene_case{
+                position: absolute;
+                width: 65%;
+                top: 10%;
+                left: -2%;
+                z-index: 2;
+            }
+            .scene_wrap{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 260px;
+
+                .scene_time{
+                    width: 35%;
+
+                    p{
+                        margin: 30px 0 50px;
+                    }
+                }
+                .scene_item{
+                    width: 45%;
+                }
+            }
+            .scene_text{
+                width: 60%;
+                line-height: 36px;
+                letter-spacing: 0.1rem;
+            }
+        }
+        .scene_group2{
+            width: 40%;
+            position: relative;
+
+            .scene_visual{
+                max-width: 584px;
+            }
+            .scene_square{
+                position: absolute;
+                top: 75%;
+                right: 80%;
+                width: 90%;
+            }
+        }
+    }
+    .snap_scene02{
+        flex-direction: row-reverse;
+
+        .scene_group1{
+            
+            .scene_case{
+                left: 37%;
+            }
+            .scene_wrap{
+
+                .scene_item{
+                    position: absolute;
+                    top: 0;
+                    left: 75%;
+                    width: 15%;
+                }
+            }
+            .scene_text{
+                transform: translateX(80%);
+            }
+        }
+        .scene_group2{
+
+            .scene_square{
+                right: -75%;
             }
         }
     }
