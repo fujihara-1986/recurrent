@@ -71,7 +71,11 @@ img {
     .flex {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: start;
+
+        @include media_query(960) {
+            margin-top: 5%;
+        }
 
         .img {
             display: block;
@@ -81,9 +85,13 @@ img {
         }
 
         .txt {
-            width: 30%;
+            width: 28%;
             margin-left: 10%;
             margin-top: 5%;
+
+            @include media_query(960) {
+                margin-left: 20px;
+            }
 
             p {
                 font-size: 36px;
@@ -91,15 +99,19 @@ img {
                 letter-spacing: 0.3rem;
                 margin-top: 7%;
 
+                @include media_query(960) {
+                    width: 95vw;
+                    margin-top: 2%;
+                }
+
                 +p {
                     font-size: 20px;
                     letter-spacing: 0.1rem;
-                }
 
-                &:last-child {
-                    font-size: 15px;
-                    line-height: 3;
-                    width: 83%;
+                    +p {
+                        font-size: 15px;
+                        line-height: 3;
+                    }
                 }
             }
         }
@@ -107,6 +119,7 @@ img {
 }
 
 .sec02 {
+    border: #000 1px solid;
     width: 76%;
     margin: 0 auto;
 
@@ -115,19 +128,19 @@ img {
 
         h2 {
             width: 20%;
-            margin: 10% auto 0;
+            margin: 118px auto 0;
         }
 
         p {
             font-size: 17px;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 30px;
         }
 
         .watch_list {
             display: flex;
             justify-content: space-evenly;
-            margin-top: 20px;
+            margin-top: 50px;
 
             .watch {
 
@@ -143,155 +156,192 @@ img {
             }
         }
 
-        .bg {
-            border: #000 10px solid;
-            width: 1100vw;
+        &::after {
+            content: "";
+            display: block;
+            width: 100vw;
             height: 65%;
+            border: #000 10px solid;
             position: absolute;
             bottom: -15%;
-            right: 0%;
+            right: 0;
             z-index: -1;
-        }
 
-    }
-
-    .scene01,
-    .scene02,
-    .scene03,
-    .scene04 {
-        position: relative;
-        margin: 20% auto;
-
-        .scene {
-            width: 15%;
-            position: absolute;
-            top: 8%;
-        }
-
-        .location {
-            width: 68%;
-            position: absolute;
-            top: 20%;
-            left: -5%;
-        }
-
-        .time {
-            width: 20%;
-            position: absolute;
-            top: 55%;
-        }
-
-        p {
-            line-height: 2;
-            letter-spacing: 0.1rem;
-            position: absolute;
-            bottom: 5%;
-        }
-
-        .parts {
-            width: 30%;
-            position: absolute;
-            top: 50%;
-            left: 25%;
-        }
-
-        .flex {
-            display: flex;
-            justify-content: flex-end;
-            align-items: end;
-            width: 100vw;
-            margin: 0 calc(50% - 50vw);
-
-            .people {
-                width: 43%;
-                z-index: -1;
-            }
-
-            .wat {
-                width: 30%;
-                margin-bottom: -8%;
-                margin-right: -5%;
+            @include media_query(960) {
+                right: -10%;
             }
         }
+    }
+}
 
-        .number {
-            width: 2%;
-            position: absolute;
-            left: 23%;
-        }
+.scene01,
+.scene02,
+.scene03,
+.scene04 {
+    position: relative;
+    margin: 250px auto 0;
+
+    .scene {
+        width: 15%;
+        position: absolute;
+        top: 8%;
     }
 
-    .scene02,
-    .scene04 {
-        .scene {
-            left: 50%;
-        }
-
-        .location {
-            left: auto;
-            right: -5%;
-        }
-
-        .time {
-            top: 50%;
-            left: 50%;
-        }
-
-        p {
-            right: 3%;
-        }
-
-        .parts {
-            width: 20%;
-            top: 10%;
-            left: auto;
-            right: 5%;
-        }
-
-        .flex {
-            justify-content: flex-start;
-
-            .wat {
-                margin-right: 0;
-                margin-left: -5%;
-            }
-        }
-
-        .number {
-            left: 75%;
-        }
+    .location {
+        width: 68%;
+        position: absolute;
+        top: 20%;
+        left: -5%;
     }
 
-    .scene03 {
-        .location {
-            width: 40%;
-            left: -3%;
-        }
-
-        .parts {
-            width: 20%;
-            top: 40%;
-            left: 32%;
-        }
-    }
-
-    .scene04 {
-        .location {
-            width: 65%;
-            left: auto;
-            right: -3%;
-        }
-
-        .parts {
-            width: 20%;
-            top: -15%;
-            left: auto;
-            right: 0%;
-        }
+    .time {
+        width: 20%;
+        position: absolute;
+        top: 55%;
     }
 
     p {
-        font-size: 18px;
-        background-color: $bg-color;
+        line-height: 2;
+        letter-spacing: 0.1rem;
+        width: 25%;
+        position: absolute;
+        top: 75%;
+
+        @include media_query(960) {
+            width: 40%;
+            left: -10%;
+        }
+    }
+
+    .parts {
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+
+        .people {
+            width: 43%;
+            z-index: -1;
+        }
+
+        .wat {
+            width: 25%;
+            margin-bottom: -3%;
+            margin-right: -5%;
+        }
+    }
+
+    .number {
+        width: 2%;
+        position: absolute;
+        bottom: -5%;
+        left: 30%;
+    }
+}
+
+.scene02,
+.scene04 {
+    .scene {
+        left: 50%;
+    }
+
+    .location {
+        left: auto;
+        right: -5%;
+    }
+
+    .time {
+        top: 50%;
+        left: 50%;
+    }
+
+    p {
+        right: 3%;
+
+        @include media_query(960) {
+            width: 40%;
+            left: auto;
+            right: -13%;
+        }
+    }
+
+    .parts {
+        width: 20%;
+        top: 10%;
+        left: auto;
+        right: 5%;
+    }
+
+    .flex {
+        justify-content: flex-start;
+
+        .wat {
+            margin-right: 0;
+            margin-left: -5%;
+        }
+    }
+
+    .number {
+        left: 68%;
+    }
+}
+
+.scene03 {
+    .location {
+        width: 40%;
+        left: -3%;
+    }
+
+    .parts {
+        width: 20%;
+        top: 40%;
+        left: 32%;
+    }
+}
+
+.scene04 {
+    .location {
+        width: 65%;
+        left: auto;
+        right: -3%;
+    }
+
+    .parts {
+        width: 20%;
+        top: -15%;
+        left: auto;
+        right: 0%;
+    }
+}
+
+.btn {
+    display: block;
+    background-color: $bg-color;
+    margin: 220px auto 0;
+    width: 545px;
+    padding: 26px 0;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+
+
+    &::after {
+        content: url('/common/img/allow.svg');
+        display: block;
+        position: absolute;
+        top: 45%;
+        right: 18%;
+        transform: translateY(-50%);
     }
 }
