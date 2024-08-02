@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 目安線 -->
+    <div class="grid"></div>
+    
     <div class="kv_list">
         <div class="kv_list-item">
             <picture>
@@ -18,15 +21,22 @@
                 <source media="(min-width:769px)" type="image/png" srcset="./common/image/kv.png">
                 <img src="./common/image/kv.png" alt="kv1">
             </picture>
-            <a class="morebtn" href="#">商品ページを見る</a>
+            <a class="kv_btn" href="#">商品ページを見る</a>
+            <a class="kv_btn_sp" href="#">
+                <!-- 商品ページを見る -->
+                <img src="./common/image/kv_btn_sp.svg" alt="仮置きボタン">
+            </a>
         </div>
-        <div class="kv_list-item">
+        <!-- <div class="kv_list-item">
             <picture>
                 <source media="(max-width:768px)" type="image/png" srcset="./common/image/kv2_sp.png">
                 <source media="(min-width:769px)" type="image/png" srcset="./common/image/kv2.png">
                 <img src="./common/image/kv2.png" alt="kv2">
             </picture>
-            <a class="morebtn" href="#">商品ページを見る</a>
+            <a class="kv_btn" href="#">商品ページを見る</a>
+            <a class="kv_btn_sp" href="#">
+                <img src="./common/image/kv_btn_sp.svg" alt="仮置きボタン">
+            </a>
         </div>
         <div class="kv_list-item">
             <picture>
@@ -34,7 +44,10 @@
                 <source media="(min-width:769px)" type="image/png" srcset="./common/image/kv3.png">
                 <img src="./common/image/kv3.png" alt="kv3">
             </picture>
-            <a class="morebtn" href="#">商品ページを見る</a>
+            <a class="kv_btn" href="#">商品ページを見る</a>
+            <a class="kv_btn_sp" href="#">
+                <img src="./common/image/kv_btn_sp.svg" alt="仮置きボタン">
+            </a>
         </div>
         <div class="kv_list-item">
             <picture>
@@ -42,8 +55,11 @@
                 <source media="(min-width:769px)" type="image/png" srcset="./common/image/kv4.png">
                 <img src="./common/image/kv4.png" alt="kv4">
             </picture>
-            
-        </div>
+            <a class="kv_btn" href="#">商品ページを見る</a>
+            <a class="kv_btn_sp" href="#">
+                <img src="./common/image/kv_btn_sp.svg" alt="仮置きボタン">
+            </a>
+        </div> -->
     </div>
     <section class="lead">
         <div class="lead_title">
@@ -64,11 +80,7 @@
                 </p>
             </div>
             <div class="lead_img">
-                <picture>
-                    <source media="(max-width:768px)" type="image/png" srcset="./common/image/lead_sp.png">
-                    <source media="(min-width:769px)" type="image/png" srcset="./common/image/lead.png">
-                    <img src="./common/image/lead.png" alt="黒いG-SHOCK">
-                </picture>
+                <img src="./common/image/lead.png" alt="黒いG-SHOCK">
             </div>
        </div>
     </section>
@@ -80,11 +92,7 @@
         <div class="snap_list">
             <div class="snap_list-item">
                 <div class="snap_img">
-                    <picture>
-                        <source media="(max-width:768px)" type="image/png" srcset="./common/image/snap1_sp.png">
-                        <source media="(min-width:769px)" type="image/png" srcset="./common/image/snap1.png">
-                        <img src="./common/image/snap1.png" alt="MRG-B5000D">
-                    </picture>
+                    <img src="./common/image/snap1.png" alt="MRG-B5000D">
                 </div>
                 <div class="snap_kind">
                     <p class="snap_case">business</p>
@@ -96,11 +104,7 @@
             </div>
             <div class="snap_list-item">
                 <div class="snap_img">
-                    <picture>
-                        <source media="(max-width:768px)" type="image/png" srcset="./common/image/snap2_sp.png">
-                        <source media="(min-width:769px)" type="image/png" srcset="./common/image/snap2.png">
-                        <img src="./common/image/snap2.png" alt="MRG-B5000B">
-                    </picture>
+                    <img src="./common/image/snap2.png" alt="MRG-B5000B">
                 </div>
                 <div class="snap_kind">
                     <p class="snap_case">activity</p>
@@ -112,11 +116,7 @@
             </div>
             <div class="snap_list-item">
                 <div class="snap_img">
-                    <picture>
-                        <source media="(max-width:768px)" type="image/png" srcset="./common/image/snap3_sp.png">
-                        <source media="(min-width:769px)" type="image/png" srcset="./common/image/snap3.png">
-                        <img src="./common/image/snap3.png" alt="MRG-BF1000R">
-                    </picture>
+                    <img src="./common/image/snap3.png" alt="MRG-BF1000R">
                 </div>
                 <div class="snap_kind">
                     <p class="snap_case">town</p>
@@ -128,11 +128,7 @@
             </div>
             <div class="snap_list-item">
                 <div class="snap_img">
-                    <picture>
-                        <source media="(max-width:768px)" type="image/png" srcset="./common/image/snap4_sp.png">
-                        <source media="(min-width:769px)" type="image/png" srcset="./common/image/snap4.png">
-                        <img src="./common/image/snap4.png" alt="MRG-B2000B">
-                    </picture>
+                    <img src="./common/image/snap4.png" alt="MRG-B2000B">
                 </div>
                 <div class="snap_kind">
                     <p class="snap_case">holiday</p>
@@ -142,6 +138,12 @@
                     <p>Sunday.</p>
                 </div>
             </div>
+        </div>
+        <div class="scene01">
+
+        </div>
+        <div class="scene02">
+
         </div>
     </section>
 
