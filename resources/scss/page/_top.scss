@@ -20,25 +20,30 @@
 //         content: "";
 //     }
 // }
-// a{
-//     text-decoration: none;
-// }
+a{
+    text-decoration: none;
+}
 
 // 目安線
 .grid{
     position: fixed;
     width: 1200px;
-    height: 20000px;
-    border: 1px solid black;
+    height: 100vh;
+    border: 1px solid red;
     left: 50%;
     transform: translateX(-50%);
     overflow-x: hidden;
+    z-index: -1;
 }
 
 // レイアウト
 section{
     max-width: 1200px;
     margin: 0 auto;
+    
+    @include media_query(768){
+        padding: 0 4%;
+    }
 }
 // kv
 
@@ -49,6 +54,7 @@ section{
     .kv_list-item{
         position: relative;
         width: 100vw;
+        height: auto;
             
         picture{
             
@@ -115,7 +121,7 @@ section{
 
     .lead_title{
         position: absolute;
-        top: -3%;
+        top: -2%;
         left: 1%;
         z-index: 2;
 
@@ -170,10 +176,24 @@ section{
                 font-size: 15px;
                 line-height: 39px;
                 margin-top: 30px;
+                letter-spacing: 0.1rem;
 
                 @include media_query(768){
                     font-size: 14px;
                     line-height: 27px;
+                }
+
+                .pc{
+                    @include media_query(768){
+                        display: none;
+                    }
+                }
+                .sp{
+                    display: none;
+
+                    @include media_query(768){
+                        display: block;
+                    }
                 }
             }
         }
@@ -183,12 +203,12 @@ section{
             @include media_query(768){
                 width: 100%;
                 margin-top: 141px;
-                // transform: translateX(10%);
+                // transform: translateX(12%);
+                overflow-x: hidden;
             }
             
             img{
                 width: 100%;
-                overflow: hidden;
             }
         }
     
@@ -223,11 +243,11 @@ section{
             height: 480px;
             position: absolute;
             top: 40%;
-            left: -36%;
+            left: -25%;
             border: 10px solid $font-color;
             z-index: -10;
 
-            @include media_query(768){
+            @include media_query(991){
                 display: none;
             }
         }
@@ -279,6 +299,13 @@ section{
 
             .scene_number{
                 width: 135px;
+
+                @include media_query(768){
+                    position: absolute;
+                    top: -13%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
             .scene_case{
                 position: absolute;
@@ -286,11 +313,18 @@ section{
                 top: 10%;
                 left: -2%;
                 z-index: 2;
+
+                @include media_query(768){
+                    top: -8%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                }
             }
             .scene_wrap{
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: start;
                 margin-top: 260px;
 
                 .scene_time{
@@ -303,11 +337,25 @@ section{
                 .scene_item{
                     width: 45%;
                 }
+
+                @include media_query(768){
+                    margin-top: 190px;
+                    justify-content: space-around;
+                }
             }
             .scene_text{
                 width: 60%;
                 line-height: 36px;
                 letter-spacing: 0.1rem;
+
+                @include media_query(768){
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            @include media_query(768){
+                width: 100%;
             }
         }
         .scene_group2{
@@ -316,13 +364,31 @@ section{
 
             .scene_visual{
                 max-width: 584px;
+
+                @include media_query(768){
+                    width: 80%;
+                    margin-left: auto;
+                }
             }
             .scene_square{
                 position: absolute;
                 top: 75%;
                 right: 80%;
                 width: 90%;
+
+                @include media_query(768){
+                    right: 40%;
+                    width: 70%;
+                }
             }
+
+            @include media_query(768){
+                width: 100%;
+            }
+        }
+
+        @include media_query(768){
+            flex-direction: column-reverse;
         }
     }
     .snap_scene02{
@@ -338,18 +404,346 @@ section{
                 .scene_item{
                     position: absolute;
                     top: 0;
-                    left: 75%;
+                    left: 70%;
                     width: 15%;
+
+                    @include media_query(768){
+                        position: static;
+                        width: 45%;
+                    }
                 }
             }
             .scene_text{
                 transform: translateX(80%);
+
+                @include media_query(768){
+                    transform: translateX(0);
+                }
             }
         }
         .scene_group2{
+            .scene_visual{
+
+                @include media_query(768){
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+            }
 
             .scene_square{
                 right: -75%;
+
+                @include media_query(768){
+                    right: -4%;
+                }
+            }
+        }
+        @include media_query(768){
+            margin-bottom: 116px;
+        }
+    }
+    // ボタン
+    .btn{
+        background-color: $main-color;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 26px 144px;
+        position: relative;
+
+        .snap_btn{
+            color: $base-color;
+
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 23%;
+                height: 1px;
+                background: $base-color;
+            }
+            &::after{
+                width: 82px;
+                transform: translateY(-50%);
+            }
+            &::before{
+                width: 8px;
+                top: 45%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+            &:hover{
+                opacity: 0.6;
+            }
+
+            @include media_query(768){
+                &::before,
+                &::after{
+                    display: none;
+                }
+            }
+        }
+
+        @include media_query(768){
+                width: 100%;
+                font-size: 15px;
+                padding: 18px 81px 17px;
+            } 
+    }
+    // 商品説明
+    .snap_desc{
+        margin-top: 150px;
+
+        .snap_desc01,
+        .snap_desc02{
+            position: relative;
+            margin-bottom: 60px;
+
+            .desc_textbox{
+                position: absolute;
+                width: 36%;
+                color: $base-color;
+                top: 10%;
+                left: 10%;
+
+                .desc_number{
+                    font-size: 34px;
+                    font-weight: normal;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $base-color;
+                    width: 37px;
+
+                    @include media_query(768){
+                        font-size: 20px;
+                        width: 25px;
+                    }
+                }
+                .desc_title{
+                    font-size: clamp(20px,2vw,31px);
+                    font-weight: lighter;
+                    letter-spacing: 0.4rem;
+                    line-height: 53px;
+                    margin: 30px 0;
+
+                    @include media_query(768){
+                        font-size: 19px;
+                        line-height: 33px;
+                        letter-spacing: 0.1rem;
+                        margin-bottom: 21px;
+                    }
+                }
+                .desc_text{
+                    font-size: 14px;
+                    font-weight: lighter;
+                    letter-spacing: 0.1rem;
+                    line-height: 28px;
+                    width: 90%;
+                    margin-bottom: 30px;
+
+                    @include media_query(768){
+                        line-height: 25px;
+                    }
+                }
+                .desc_btn{
+                    position: relative;
+                    padding: 0 42px 10.5px 0;
+                    color: $base-color;
+                    font-size: 14px;
+                    font-weight:lighter;
+                    letter-spacing: 0.1em;
+                    border-bottom: 1px solid $base-color;
+        
+                    &::before,
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 30%;
+                        right: 2%;
+                        height: 1px;
+                        background: $base-color;
+                    }
+                    &::after{
+                        width: 30px;
+                        transform: translateY(-50%);
+                    }
+                    &::before{
+                        width: 8px;
+                        top: 20%;
+                        transform: translateY(-50%) rotate(45deg);
+                    }
+                    &:hover{
+                        opacity: 0.6;
+                    }
+
+                    @include media_query(768){
+                        display: none;
+                    }
+                }
+
+                @include media_query(768){
+                    top: 8%;
+                    left: 25%;
+                    width: 75%;
+                }
+            } 
+            .desc_btn_sp{
+                display: none;
+
+                @include media_query(768){
+                    display: block;
+                    position: absolute;
+                    top: 93%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding: 0 42px 10.5px 0;
+                    color: $base-color;
+                    font-size: 14px;
+                    font-weight:lighter;
+                    letter-spacing: 0.1em;
+        
+                    &::before,
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 30%;
+                        right: -25%;
+                        height: 1px;
+                        background: $base-color;
+                    }
+                    &::after{
+                        width: 70px;
+                        transform: translateY(-50%);
+                    }
+                    &::before{
+                        width: 8px;
+                        top: 20%;
+                        transform: translateY(-50%) rotate(45deg);
+                    }
+                    &:hover{
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+        .snap_desc02{
+            .desc_textbox{
+                left: 58%;
+                top: 15%;
+
+                @include media_query(768){
+                    left: 10%;
+                }
+            }
+        }
+
+        @include media_query(768){
+            margin-top: 100px;
+        }
+    }
+}
+// お客様の声
+.owners-voice{
+    margin-top: 140px;
+
+    .voice_title{
+        
+        max-width: 585px;
+        margin: 0 auto;
+    }
+    .title_ja{
+        text-align: center;
+        margin: 30px 0 50px;
+    }
+    // 声一覧
+    .voice_list{
+        display: flex;
+        justify-content: space-between;
+        gap: 46px;
+        flex-wrap: wrap;
+
+        .voice_list-item{
+            width: 45%;
+
+            .fukidashi{
+                position: relative;
+                background-color: $main-color;
+                color: $base-color;
+                border-radius: 10px;
+
+                &::before,
+                &::after{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-radius: 50%;
+                    transform: rotate(45deg);
+                    border-left: 20px solid transparent;
+                    border-top: 20px solid transparent;
+                }
+                &::before{
+                    left: 35px;
+                    bottom: -15px;
+                    border-right: 20px solid $main-color;
+                    border-bottom: 20px solid $main-color;
+                }
+                &::after{
+                    left: 20px;
+                    bottom: -20px;
+                    border-right: 20px solid $base-color;
+                    border-bottom: 20px solid $base-color;
+                }
+                
+
+                .owner_text{
+                    font-size: 13px;
+                    font-weight: lighter;
+                    line-height: 21px;
+                    padding: 22px 29px 33px 25px;
+
+                    .owner_info{
+                        font-weight: normal;
+                        margin-top: 15px;
+
+                    }
+                }
+            }
+            // 右側の吹き出しの位置変え
+            &:nth-child(2n){
+                .fukidashi{
+
+                    &::before{
+                        left: 285px;
+                    }
+                    &::after{
+                        left: 300px;
+                    }
+                }
+            }
+            // 吹き出しの色変え
+            &:nth-child(2),
+            &:nth-child(5){
+                .fukidashi{
+                    background-color: $fukidashi2;
+
+                    &::before{
+                        border-color: $fukidashi2;
+                    }
+                }
+            }
+            &:nth-child(3n){
+                .fukidashi{
+                    background-color: $fukidashi3;
+
+                    &::before{
+                        border-color: $fukidashi3;
+                    }
+                }
+            }
+
+            @include media_query (768){
+                width: 100%;
             }
         }
     }
