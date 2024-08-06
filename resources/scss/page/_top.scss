@@ -1,7 +1,1 @@
-.test {
-    color: blue;
-
-    .red {
-        color: red;
-    }
-}
+@use '../base/vars'as *;

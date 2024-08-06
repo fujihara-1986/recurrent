@@ -12,12 +12,18 @@ $line-height: 1.5;
 ///*------------------------------------*//
 //    Colors
 //*------------------------------------*//
-$main-color: #fff;
-$accent-color: #f00;
-$font-color: #000;
-$base-color: #fff;
-$bg-color: #fff;
+$black: #1C1C1C;
 
+
+
+
+///*------------------------------------*//
+//    breakpoints
+//*------------------------------------*//
+$sm: 768;
+$md: 1000;
+$lg: 1200;
+$xl: 1600;
 
 
 
@@ -33,6 +39,6 @@ $bg-color: #fff;
 }
 
 //フォントサイズ計算
-@mixin rem($size, $base: 16) {
-    font-size: math.div($size, $base) + rem;
+@function rem($size, $base: 16) {
+    @return math.div($size, $base)+rem;
 }
