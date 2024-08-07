@@ -1,1 +1,23 @@
-@use '../base/vars'as *;
+@use "../base/vars" as *;
+
+body {
+  font-family: $font-family;
+
+  .hotel_fv_wrap {
+    position: relative;
+
+    .hotel_fv {
+      max-width: 500px;
+    }
+    .instaram_icon {
+    }
+
+    .fv_text {
+      position: absolute;
+    }
+    .dotted_circle {
+      position: absolute;
+      width: 50px;
+    }
+  }
+}

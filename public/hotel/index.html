@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ペットホテル | WANHOUSE</title>
 
-    <link rel="stylesheet" href="../common/css/style.css">
-    <link rel="stylesheet" href="../common/js/script.js">
-</head>
-<body>
+    <link rel="stylesheet" href="../common/css/style.css" />
+    <link rel="stylesheet" href="../common/js/script.js" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <main id="hotel" class="hotel">
+      <div class="hotel_fv_wrap">
+        <div class="instagram_icon">
+          <!-- <img
+            src="/common/img/hotel/instagram_icon.png"
+            alt="インスタグラムのアイコン"
+          /> -->
+        </div>
+        <h2 class="fv_text">
+          <span>PET HOTEL</span>
+          <span>ペットホテル</span>
+        </h2>
+        <div class="hotel_fv">
+          <picture>
+            <source
+              srcset="/common/img/hotel/hotel_fv.jpg"
+              type="image/jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/common/img/hotel/hotel_fv_sp.jpg"
+              type="image/jpg"
+              media="(min-width: 769px)"
+            />
+            <img
+              src="/common/img/hotel/hotel_fv_sp.jpg"
+              alt="ファーストビュー"
+            />
+          </picture>
+        </div>
+        <div class="dotted_circle">
+          <img
+            class="img"
+            src="/common/img/hotel/dotted_circle.png"
+            alt="点線の円"
+          />
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
