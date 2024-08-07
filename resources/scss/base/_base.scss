@@ -1,6 +1,6 @@
 @use 'vars' as *;
 
-.img{
+.img {
   position: absolute;
   top: 0;
   left: 0;
@@ -8,13 +8,26 @@
   height: 100%;
 }
 
-.container{
+.sampleImg {
+  position: relative;
+  aspect-ratio: calc(1250/595.85);
+
+  @include media_query() {
+    aspect-ratio: calc(350/536);
+  }
+}
+
+.container {
   width: 100%;
   max-width: rem(1080);
   padding: 0 rem(40);
   margin: 0 auto;
 
-  @include media_query($sm){
+  @include media_query($sm) {
     padding: 0 rem(20);
   }
+
+  font-size: rem(16);
+
+
 }
