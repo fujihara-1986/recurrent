@@ -3,7 +3,7 @@
 ///*------------------------------------*//
 //    Fonts
 //*------------------------------------*//
-$font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+$font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
 $line-height: 1.5;
 
 
@@ -32,7 +32,7 @@ $xl: 1600;
 //*------------------------------------*//
 
 //メディアクエリ挿入
-@mixin media_query($width:640) {
+@mixin media_query($width: 640) {
     @media screen and (max-width: $width+px) {
         @content;
     }
