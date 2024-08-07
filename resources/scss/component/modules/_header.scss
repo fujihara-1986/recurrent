@@ -1,1 +1,48 @@
 @use '../../base/vars'as *;
+
+// header切り替え
+.header_pc{
+    display: block;
+
+    @include media_query($sm){
+        display: none;
+    }
+}
+.header_sp{
+    display: none;
+
+    @include media_query($sm){
+        display: block;
+    }
+}
+
+// レイアウト
+.header_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: grey;
+
+
+    .header_tel{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        span{
+            display: block;
+        }
+        .tel_text{
+            font-size: rem(12);
+        }
+    }
+    ul{
+        display: flex;
+
+        .nav_ja,
+        .nav_en{
+            display: block;
+        }
+    }
+}
