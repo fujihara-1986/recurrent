@@ -1,1 +1,49 @@
-@use '../base/vars'as *;
+@use '../base/vars' as *;
+
+.kv {
+    position: relative;
+
+    .kv-img {
+        width: 90%;
+        margin: 0 0 0 auto;
+        position: relative;
+        aspect-ratio: calc(1250/595);
+        border-bottom-left-radius: 250px;
+        overflow: hidden;
+
+        @include media_query($sm) {
+            aspect-ratio: calc(360/536);
+            width: 100%;
+        }
+    }
+
+    .icon {
+        width: 10%;
+        aspect-ratio: calc(100/66);
+        position: absolute;
+        top: 40px;
+        left: 24px;
+        z-index: 1;
+    }
+
+    h1 {
+        position: absolute;
+        bottom: 63px;
+        left: 100px;
+
+
+        p {
+            font-size: rem(18);
+
+            &:first-of-type {
+                font-size: rem(44);
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+    .scroll {
+        aspect-ratio: calc(19/185);
+    }
+
+}
