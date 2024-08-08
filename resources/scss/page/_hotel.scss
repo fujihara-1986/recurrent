@@ -2,77 +2,177 @@
 
 body {
   font-family: $font-family;
-}
-.fv {
-  .fv_img {
-    position: relative;
 
-    .fv_dog {
+  .fv {
+    .fv_img {
       position: relative;
-      left: 27%;
-      max-width: 73%;
-      aspect-ratio: calc(1005 / 378);
 
-      @include media_query($sm) {
-        aspect-ratio: calc(298 / 305);
+      .fv_dog {
+        position: relative;
+        left: 27%;
+        max-width: 73%;
+        aspect-ratio: calc(1005 / 378);
+
+        @include media_query($sm) {
+          aspect-ratio: calc(298 / 305);
+        }
+      }
+
+      .breadcrumb_link {
+        position: absolute;
+        top: 5%;
+        left: 13%;
+        display: flex;
+        list-style: none;
+        li {
+          margin: 0 rem(7);
+          font-size: rem(12);
+        }
+        .font-color {
+          color: $accent-color;
+        }
+        @include media_query($sm) {
+          display: none;
+        }
+      }
+
+      .fv_text {
+        position: absolute;
+        top: 30%;
+        left: 13%;
+        @include media_query($sm) {
+          top: 78%;
+          left: 5%;
+        }
+        .hotel_title {
+          display: block;
+          font-size: rem(70);
+          margin-bottom: rem(5);
+          @include media_query($sm) {
+            font-size: rem(46);
+          }
+        }
+        p {
+          display: block;
+          font-size: rem(18);
+          font-weight: normal;
+          @include media_query($sm) {
+            font-size: rem(13);
+          }
+        }
       }
     }
 
-    .breadcrumb_link {
-      position: absolute;
+    .instagram_icon {
       top: 5%;
-      left: 13%;
-      display: flex;
-      list-style: none;
-      li {
-        margin: 0 rem(7);
-        font-size: rem(12);
-      }
-      .font-color {
-        color: $accent-color;
-      }
+      left: 2%;
+      position: absolute;
+      aspect-ratio: calc(30 / 113);
+      height: rem(113);
+      position: fixed;
+      z-index: 1;
       @include media_query($sm) {
         display: none;
       }
     }
-
-    .fv_text {
-      position: absolute;
-      top: 30%;
-      left: 13%;
-      .hotel_title {
-        display: block;
-        font-size: rem(70);
-        margin-bottom: rem(5);
+    .dotted_circle {
+      position: relative;
+      max-width: rem(292);
+      aspect-ratio: calc(284 / 292);
+      margin-top: rem(-100);
+      z-index: -1;
+      @include media_query($sm) {
+        max-width: rem(170);
+        margin-top: rem(30);
       }
-      p {
-        display: block;
-        font-size: rem(18);
-        font-weight: normal;
+    }
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: rem(-60) auto auto;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          position: relative;
+          border: rem(2) solid;
+          width: 100%;
+          text-align: center;
+          list-style: none;
+          margin: 0 rem(10);
+          padding: rem(15);
+          font-size: rem(18);
+          border-radius: rem(7) rem(7) 0 rem(7);
+          background-color: $base-color;
+          @include media_query($md) {
+            font-size: rem(14);
+            padding: rem(15) rem(10);
+          }
+          @include media_query($sm) {
+            border-radius: rem(7);
+            margin: 0 rem(1);
+            padding: rem(10) rem(1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          a {
+            letter-spacing: rem(2);
+            @include media_query($md) {
+              letter-spacing: rem(1);
+            }
+            br {
+              display: none;
+              @include media_query($sm) {
+                display: block;
+              }
+            }
+          }
+        }
+        li::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 5%;
+          transform: translateY(-50%);
+          transform: rotate(90deg);
+          border: 5px solid transparent;
+          border-left: 7px solid #000;
+          transition: 0.5s all;
+          @include media_query($sm) {
+            display: none;
+          }
+        }
+        li:hover {
+          background-color: #f4f0ea;
+        }
+        li:hover::before {
+          transform: rotate(90deg) translateX(rem(5));
+        }
       }
     }
   }
-
-  .instagram_icon {
-    top: 20%;
-    left: 2%;
-    position: absolute;
-    aspect-ratio: calc(30 / 113);
-    height: rem(113);
-  }
-  .dotted_circle {
-    position: relative;
-    max-width: rem(292);
-    aspect-ratio: calc(284 / 292);
-    margin-top: rem(-100);
-    z-index: -1;
-  }
-  .container {
-    ul {
-      display: flex;
-      li {
-        display: inline-block;
-        list-style: none;
+  .features_container {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-top: rem(140);
+    h2 {
+      font-size: rem(32);
+      letter-spacing: rem(3);
+      text-align: center;
+      span {
+        position: relative;
+        background-color: #f4f0ea;
+        border-radius: rem(30) 0 rem(30) 0;
+        padding: rem(15) rem(84) rem(19) rem(80);
+      }
+      span::after {
+        content: "";
+        position: absolute;
+        border: rem(2) solid;
+        border-radius: rem(30) 0 rem(30) 0;
+        inset: rem(-4) rem(4) rem(4) rem(-4);
       }
     }
   }
