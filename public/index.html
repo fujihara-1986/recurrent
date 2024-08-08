@@ -22,12 +22,12 @@
 
 <body>
     <main id="top" class="top">
-        <div class="kv">
+        <div class="fv">
             <div class="flex">
                 <div class="insta">
                     <a href="#"><img class="img" src="./common/img/top/instagram.png" alt=""></a>
                 </div>
-                <div class="kv-img">
+                <div class="kv">
                     <div class="icon">
                         <img class="img" src="./common/img/top/icon.png" alt="">
                     </div>
@@ -44,9 +44,85 @@
                 </h1>
             </div>
             <div class="scroll">
-                <p>scroll Down</p>
+                <picture>
+                    <source media="(max-width: 768px)" type="image/png" srcset="./common/img/top/scroll_sp.png">
+                    <source media="(min-width: 769px)" type="image/png" srcset="./common/img/top/scroll.png">
+                    <img class="img" src="./common/img/top/scroll.png" alt="キービジュアル">
+                </picture>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <div class="list_item">
+                        <li><a href="">コンセプト</a></li>
+                        <p>CONCEPT</p>
+                    </div>
+
+                    <div class="list_item">
+                        <li><a href="">ドッグラン</a></li>
+                        <p>DOG RUN</p>
+                    </div>
+
+                    <div class="list_item">
+                        <li><a href="">ペットホテル</a></li>
+                        <p>PET HOTEL</p>
+                    </div>
+
+                    <div class="list_item">
+                        <li><a href="">トリミング</a></li>
+                        <p>TRIMMING</p>
+                    </div>
+
+                    <div class="list_item">
+                        <li><a href="">ギャラリー</a></li>
+                        <p>GALLERY</p>
+                    </div>
+
+                    <div class="list_item">
+                        <li><a href="">お知らせ</a></li>
+                        <p>NEWS</p>
+                    </div>
+
+                    <div class="list_item">
+                        <li><a href="">運営について</a></li>
+                        <p>INFO&ACCESS</p>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="contact_fixd">
+                <picture>
+                    <source media="(max-width: 768px)" type="image/png" srcset="./common/img/top/contact_img_sp.png">
+                    <source media="(min-width: 769px)" type="image/png" srcset="./common/img/top/contact_img.png">
+                    <img class="img" src="./common/img/top/contact_img.png" alt="">
+                </picture>
             </div>
         </div>
+
+
+        <div class="sec">
+            <section class="news">
+                <div class="title">
+                    <h2>NEWS</h2>
+                    <p>お知らせ</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href=""><time
+                                datetime="2022-06-03">2022.06.03</time><span>ここに記事タイトルが入ります。ここに記事タイトルが入ります。</span></a>
+                    </li>
+                    <li>
+                        <a href=""><time
+                                datetime="2022-06-03">2022.06.03</time><span>ここに記事タイトルが入ります。ここに記事タイトルが入ります。</span></a>
+                    </li>
+                </ul>
+                <div class="btn">
+                    <a href="#"><img class="img" src="./common/img/top/btn_01.png" alt=""></a>
+                </div>
+            </section>
+        </div>
+
+
 
     </main>
 </body>
