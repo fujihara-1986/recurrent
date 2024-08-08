@@ -2,22 +2,78 @@
 
 body {
   font-family: $font-family;
-
-  .hotel_fv_wrap {
+}
+.fv {
+  .fv_img {
     position: relative;
 
-    .hotel_fv {
-      max-width: 500px;
+    .fv_dog {
+      position: relative;
+      left: 27%;
+      max-width: 73%;
+      aspect-ratio: calc(1005 / 378);
+
+      @include media_query($sm) {
+        aspect-ratio: calc(298 / 305);
+      }
     }
-    .instaram_icon {
+
+    .breadcrumb_link {
+      position: absolute;
+      top: 5%;
+      left: 13%;
+      display: flex;
+      list-style: none;
+      li {
+        margin: 0 rem(7);
+        font-size: rem(12);
+      }
+      .font-color {
+        color: $accent-color;
+      }
+      @include media_query($sm) {
+        display: none;
+      }
     }
 
     .fv_text {
       position: absolute;
+      top: 30%;
+      left: 13%;
+      .hotel_title {
+        display: block;
+        font-size: rem(70);
+        margin-bottom: rem(5);
+      }
+      p {
+        display: block;
+        font-size: rem(18);
+        font-weight: normal;
+      }
     }
-    .dotted_circle {
-      position: absolute;
-      width: 50px;
+  }
+
+  .instagram_icon {
+    top: 20%;
+    left: 2%;
+    position: absolute;
+    aspect-ratio: calc(30 / 113);
+    height: rem(113);
+  }
+  .dotted_circle {
+    position: relative;
+    max-width: rem(292);
+    aspect-ratio: calc(284 / 292);
+    margin-top: rem(-100);
+    z-index: -1;
+  }
+  .container {
+    ul {
+      display: flex;
+      li {
+        display: inline-block;
+        list-style: none;
+      }
     }
   }
 }
