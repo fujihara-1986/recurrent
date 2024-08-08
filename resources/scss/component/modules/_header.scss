@@ -23,6 +23,7 @@
     align-items: center;
     width: 100%;
     padding: rem(20) rem(45);
+    box-shadow: 0 10px  10px -10px rgba(33,35,38,0.1);
 
 
     .header_tel{
@@ -55,6 +56,10 @@
         display: flex;
         gap: rem(36);
 
+        @include media_query($lg){
+            gap: rem(19);
+        }
+
         a{
             position: relative;
 
@@ -79,12 +84,21 @@
         }
         .nav_ja{
             line-height: rem(19);
+
+            @include media_query($lg){
+                font-size: rem(12);
+            }
         }
         .nav_en{
             text-transform: uppercase;
             font-size: rem(12);
             text-align: center;
             line-height: rem(18);
+            color: $text-color2;
+
+            @include media_query($lg){
+                font-size: rem(10);
+            }
         }
     }
 }
