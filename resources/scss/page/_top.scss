@@ -1,49 +1,159 @@
 @use '../base/vars' as *;
 
+.body {
+    overflow-x: hidden;
+}
+
 .kv {
     position: relative;
 
-    .kv-img {
-        width: 90%;
-        margin: 0 0 0 auto;
+    .flex {
         position: relative;
-        aspect-ratio: calc(1250/595);
-        border-bottom-left-radius: 250px;
-        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
 
-        @include media_query($sm) {
-            aspect-ratio: calc(360/536);
-            width: 100%;
+
+        .insta {
+            width: 2%;
+            position: relative;
+            aspect-ratio: calc(30/113);
+            margin: 185px 0 0 35px;
+
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+
+            @include media_query($lg) {
+                margin: 120px 0 0 35px;
+            }
+
+            @include media_query($sm) {
+                display: none;
+            }
         }
-    }
-
-    .icon {
-        width: 10%;
-        aspect-ratio: calc(100/66);
-        position: absolute;
-        top: 40px;
-        left: 24px;
-        z-index: 1;
-    }
-
-    h1 {
-        position: absolute;
-        bottom: 63px;
-        left: 100px;
 
 
-        p {
-            font-size: rem(18);
+        .kv-img {
+            width: 90%;
+            position: relative;
+            aspect-ratio: calc(1250/595);
+            border-bottom-left-radius: 250px;
+            overflow: hidden;
 
-            &:first-of-type {
-                font-size: rem(44);
-                padding-bottom: 40px;
+            @include media_query($sm) {
+                aspect-ratio: calc(360/536);
+                width: 100%;
+            }
+        }
+
+        .icon {
+            width: 10%;
+            aspect-ratio: calc(100/66);
+            position: absolute;
+            top: 40px;
+            left: 24px;
+            z-index: 1;
+
+            @include media_query($sm) {
+                width: 25%;
+                top: 20px;
+                left: 20px;
+            }
+        }
+
+        h1 {
+            position: absolute;
+            bottom: 63px;
+            left: 100px;
+
+            @include media_query($lg) {
+                bottom: 20px;
+            }
+
+            @include media_query($sm) {
+                bottom: -19px;
+                left: 20px;
+            }
+
+            p {
+                font-size: rem(18);
+                font-weight: 500;
+
+                @include media_query($sm) {
+                    font-size: rem(12);
+                    letter-spacing: rem(1.5);
+                }
+
+                &:first-of-type {
+                    font-size: rem(44);
+                    font-weight: bold;
+                    padding-bottom: 40px;
+
+                    @include media_query($lg) {
+                        font-size: rem(31);
+                        padding-bottom: 20px;
+                    }
+
+                    @include media_query($sm) {
+                        font-size: rem(30);
+                    }
+                }
+
+                .sp {
+                    display: none;
+
+                    @include media_query($sm) {
+                        display: block;
+                    }
+                }
             }
         }
     }
 
     .scroll {
-        aspect-ratio: calc(19/185);
-    }
+        position: absolute;
+        bottom: 50px;
+        left: 42px;
+        transform: rotate(90deg);
+        transform-origin: left bottom;
+        display: inline-block;
 
+        @include media_query($sm) {
+            bottom: 100px;
+            left: 80%;
+        }
+
+        p {
+            font-family: $font-poppin;
+            font-size: rem(13);
+            color: #D97B0E;
+
+            @include media_query($md) {
+                font-size: rem(11);
+            }
+
+            &::after {
+                // border: 1px solid;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+                width: 100%;
+                height: auto;
+                aspect-ratio: calc(97/12);
+                background-image: url("../img/top/scroll.png");
+                background-size: cover;
+                background-position: center;
+                margin-left: 12px;
+
+                @include media_query($md) {
+                    width: 90%;
+                }
+            }
+        }
+    }
 }
