@@ -5,6 +5,19 @@ footer{
     border-top-right-radius: rem(280);
     margin-right: rem(50);
     padding: rem(121) 2% rem(22);
+    position: relative;
+    
+    .footer_topbtn{
+        position: absolute;
+        top: -4%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media_query($md){
+            top: -2%;
+        }
+    }
+
 
     @include media_query($sm){
         margin-right: 0;
@@ -15,16 +28,16 @@ footer{
     }
 }
 .footer_wrap{
-    max-width: 1000px;
+    max-width: rem(1000);
     width: 100%;
     margin: 0 auto;
 }
 .footer_logo{
     width: 100%;
-    max-width: 383px;
+    max-width: rem(383);
 
-    @include media_query($sm){
-        max-width: rem(250);
+    @include media_query($pl3){
+        margin: 0 auto;
     }
 }
 .footer_group{
@@ -39,9 +52,12 @@ footer{
 .footer_info{
     margin-top: rem(19);
 
+    @include media_query($pl3){
+        margin-top: rem(59);
+    }
 }
 .footer_access{
-    max-width: 247px;
+    max-width: rem(247);
     padding: rem(15);
     border-top: 2px solid #000;
     border-right: 2px solid #000;
@@ -50,30 +66,43 @@ footer{
     border-top-left-radius: rem(30);
     background-color: $base-color;
     font-size: rem(12);
-    line-height: rem(14);
+    line-height: 1.2;
     text-align: center;
+
+    @include media_query($pl3){
+        font-weight: bold;
+    }
 }
 .footer_address{
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
     padding: rem(29);
 
-    @include media_query($md)
+    @include media_query($sm){
+        padding-left: 0;
+    }
 }
 .address{
     display: block;
-    line-height: rem(19);
+    line-height: 1.2;
     margin-bottom: rem(19);
+
+    .sp{
+        display: none;
+
+        @include media_query($pl3){
+            display: block;
+        }
+    }
 }
 .post_code{
     display: block;
     font-size: rem(14);
-    line-height: rem(17);
 }
 .footer_tel{
     display: block;
     width: 100%;
-    max-width: 301px;
+    max-width: rem(301);
     position: relative;
 
     img{
@@ -106,10 +135,19 @@ footer{
         dl{
             display: flex;
 
+            @include media_query($sm){
+                display: block;
+            }
+
             dt{
                 position: relative;
                 width: rem(88);
                 font-weight: bold;
+
+                @include media_query($sm){
+                    margin-bottom: rem(18);
+                    font-weight: normal;
+                }
 
                 .slash{
                     position: absolute;
@@ -117,6 +155,10 @@ footer{
                     right: -40%;
                     width: rem(13);
                     margin-right: rem(14);
+
+                    @include media_query($sm){
+                        display: none;
+                    }
                 }
             }
             dd{
@@ -138,17 +180,29 @@ footer{
 }
 .day{
     padding-left: rem(14);
+
+    @include media_query($sm){
+        padding-left: 0;
+    }
 }
 .close{
     margin-left: rem(29);
+
+    @include media_query($sm){
+        margin-left: rem(42);
+    }
 }
 .footer_map{
     position: relative;
     width: 100%;
-    height: 0;
     padding-top: 56.25%;
-    max-width: 480px;
-    max-height: 445px;
+    max-width: rem(480);
+    max-height: rem(445);
+
+    @include media_query($pl3){
+        min-width: rem(314);
+        min-height: rem(291);
+    }
 
     iframe{
         position: absolute;
@@ -156,14 +210,23 @@ footer{
         left: 0;
         width: 100%;
         height: 100%;    
-        max-width: 480px;
-        max-height: 445px;
+        max-width: rem(480);
+        max-height: rem(445);
+
+        @include media_query($pl3){
+            min-width: rem(314);
+            min-height: rem(291);
+        }
     }
 }
 
 .footer_copyright{
     color: $text-color3;
     font-size: rem(13);
+
+    @include media_query($pl3){
+        text-align: center;
+    }
 
     a{
         display: block;
