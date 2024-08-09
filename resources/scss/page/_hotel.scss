@@ -2,7 +2,110 @@
 
 body {
   font-family: $font-family;
+  color: $text-color1;
 
+  // header切り替え
+  .header_pc {
+    display: block;
+
+    @include media_query($sm) {
+      display: none;
+    }
+  }
+  .header_sp {
+    display: none;
+
+    @include media_query($sm) {
+      display: block;
+    }
+  }
+
+  // レイアウト
+  .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: rem(20) rem(45);
+    box-shadow: 0 10px 10px -10px rgba(33, 35, 38, 0.1);
+
+    .header_tel {
+      display: block;
+      width: 100%;
+      max-width: 246px;
+      margin-left: auto;
+      position: relative;
+
+      img {
+        transition: opacity 0.3s;
+        &:first-of-type {
+          &:hover {
+            opacity: 0;
+          }
+        }
+        &:last-of-type {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    ul {
+      display: flex;
+      gap: rem(36);
+
+      @include media_query($lg) {
+        gap: rem(19);
+      }
+
+      a {
+        position: relative;
+
+        .nav_hover {
+          position: absolute;
+          width: rem(31);
+          top: 0;
+          right: -15px;
+          z-index: -1;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        &:hover {
+          .nav_hover {
+            opacity: 1;
+          }
+        }
+      }
+      .nav_ja,
+      .nav_en {
+        display: block;
+      }
+      .nav_ja {
+        line-height: rem(19);
+
+        @include media_query($lg) {
+          font-size: rem(12);
+        }
+      }
+      .nav_en {
+        text-transform: uppercase;
+        font-size: rem(12);
+        text-align: center;
+        line-height: rem(18);
+        color: $text-color2;
+
+        @include media_query($lg) {
+          font-size: rem(10);
+        }
+      }
+    }
+  }
+  //headerここまで
   .fv {
     .fv_img {
       position: relative;
@@ -24,15 +127,21 @@ body {
         left: 13%;
         display: flex;
         list-style: none;
+        @include media_query($sm) {
+          display: none;
+        }
+        @include media_query($md) {
+          left: 6%;
+        }
+        @include media_query($lg) {
+          left: 10%;
+        }
         li {
           margin: 0 rem(7);
           font-size: rem(12);
         }
         .font-color {
           color: $accent-color;
-        }
-        @include media_query($sm) {
-          display: none;
         }
       }
 
@@ -43,6 +152,12 @@ body {
         @include media_query($sm) {
           top: 78%;
           left: 5%;
+        }
+        @include media_query($md) {
+          left: 6%;
+        }
+        @include media_query($lg) {
+          left: 10%;
         }
         .hotel_title {
           display: block;
@@ -64,16 +179,22 @@ body {
     }
 
     .instagram_icon {
-      top: 5%;
+      top: 25%;
       left: 2%;
       position: absolute;
       aspect-ratio: calc(30 / 113);
       height: rem(113);
       position: fixed;
       z-index: 1;
+      transition: 0.5s all;
+
       @include media_query($sm) {
         display: none;
       }
+    }
+    .instagram_icon:hover {
+      opacity: 0.5;
+      transition: 0.5s all;
     }
     .dotted_circle {
       position: relative;
@@ -104,6 +225,7 @@ body {
           font-size: rem(18);
           border-radius: rem(7) rem(7) 0 rem(7);
           background-color: $base-color;
+          transition: 0.5s all;
           @include media_query($md) {
             font-size: rem(14);
             padding: rem(15) rem(10);
@@ -137,14 +259,15 @@ body {
           transform: translateY(-50%);
           transform: rotate(90deg);
           border: 5px solid transparent;
-          border-left: 7px solid #000;
+          border-left: 7px solid $text-color1;
           transition: 0.5s all;
           @include media_query($sm) {
             display: none;
           }
         }
         li:hover {
-          background-color: #f4f0ea;
+          background-color: $main-color1-down;
+          transition: 0.5s all;
         }
         li:hover::before {
           transform: rotate(90deg) translateX(rem(5));
@@ -156,23 +279,105 @@ body {
     width: 100%;
     max-width: 1040px;
     margin: 0 auto;
+    padding: 0 rem(20);
     padding-top: rem(140);
+    @include media_query($sm) {
+      padding-top: rem(50);
+    }
     h2 {
-      font-size: rem(32);
-      letter-spacing: rem(3);
-      text-align: center;
+      margin: 0 auto;
+      max-width: 490px;
+      @include media_query($sm) {
+        max-width: 320px;
+      }
       span {
         position: relative;
-        background-color: #f4f0ea;
+        display: block;
+        font-size: rem(32);
+        letter-spacing: rem(3);
+        text-align: center;
+        background-color: $main-color1-down;
         border-radius: rem(30) 0 rem(30) 0;
         padding: rem(15) rem(84) rem(19) rem(80);
+        @include media_query($sm) {
+          font-size: rem(20);
+          padding: rem(10) rem(0) rem(15) rem(0);
+        }
       }
       span::after {
         content: "";
         position: absolute;
-        border: rem(2) solid;
+        width: 100%;
+        height: 100%;
+        border: rem(2) solid $text-color1;
         border-radius: rem(30) 0 rem(30) 0;
-        inset: rem(-4) rem(4) rem(4) rem(-4);
+        top: rem(-4);
+        left: rem(-4);
+      }
+    }
+    .features_list {
+      margin-top: rem(50);
+      padding: rem(28);
+      background-color: $main-color1-down;
+      border-radius: rem(25);
+      @include media_query($sm) {
+        padding: rem(14);
+        max-width: 500px;
+        margin: rem(50) auto auto;
+      }
+      ul {
+        background-color: #fff;
+        border-radius: rem(20);
+        border: rem(2) solid $text-color1;
+        padding: rem(56) 0 rem(90) 0;
+        li {
+          display: flex;
+          justify-content: left;
+          padding-top: rem(34);
+          align-items: center;
+          max-width: 560px;
+          margin: 0 auto;
+          @include media_query($sm) {
+            display: block;
+            text-align: center;
+          }
+          .number_circle {
+            font-family: $font-poppin;
+            width: rem(60);
+            height: rem(60);
+            line-height: rem(60);
+            text-align: center;
+            color: $main-color1-up;
+            border-radius: rem(100);
+            border: rem(2) solid $main-color1-up;
+            @include media_query($sm) {
+              margin: 0 auto;
+              width: rem(40);
+              height: rem(40);
+              line-height: rem(38);
+              font-size: rem(12);
+            }
+          }
+          .features_text {
+            padding-left: rem(32);
+            font-size: rem(18);
+            font-weight: bold;
+            @include media_query($sm) {
+              padding-left: 0;
+              padding-top: rem(16);
+              font-size: rem(16);
+            }
+            span {
+              color: $main-color1-up;
+            }
+            .br {
+              display: none;
+              @include media_query($sm) {
+                display: block;
+              }
+            }
+          }
+        }
       }
     }
   }
