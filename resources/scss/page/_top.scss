@@ -31,6 +31,7 @@ ul {
         position: fixed;
         aspect-ratio: calc(30/113);
         margin: 185px 0 0 35px;
+        z-index: 10000;
 
         &:hover {
             opacity: 0.5;
@@ -447,6 +448,7 @@ ul {
 
         .flex {
             display: flex;
+            align-items: center;
 
             @media screen and (min-width: 1500px) {
                 justify-content: space-between;
@@ -463,7 +465,11 @@ ul {
                 margin-left: calc(50% - 50vw);
 
                 @media screen and (min-width: 1500px) {
-                    width: 100%;
+                    width: 75%;
+                }
+
+                @include media_query($pl3) {
+                    width: 50%;
                 }
 
                 @include media_query($sm) {
@@ -477,6 +483,10 @@ ul {
             .wrap {
                 padding-left: 83px;
 
+                @include media_query($lg) {
+                    padding-left: 40px;
+                }
+
                 @include media_query($sm) {
                     padding-left: 0px;
                 }
@@ -488,6 +498,12 @@ ul {
                     @include media_query($sm) {
                         display: block;
                         margin-top: -30px;
+                    }
+
+                    h2 {
+                        @include media_query($pl3) {
+                            font-size: rem(40);
+                        }
                     }
 
                     p {
@@ -508,6 +524,11 @@ ul {
                     line-height: 2;
                     margin-top: 48px;
 
+                    @include media_query($pl3) {
+                        font-size: rem(15);
+                        margin-top: 20px;
+                    }
+
                     @include media_query($sm) {
                         font-size: rem(15);
                         margin-top: 40px;
@@ -516,7 +537,7 @@ ul {
                     .sp {
                         display: none;
 
-                        @include media_query($sm) {
+                        @include media_query($lg) {
                             display: block;
                         }
                     }
@@ -529,6 +550,11 @@ ul {
             width: 80%;
             position: relative;
             margin-top: 80px;
+
+            @include media_query($pl3) {
+                margin-top: 30px;
+
+            }
 
             @include media_query($sm) {
                 width: 100%;
@@ -547,13 +573,17 @@ ul {
         width: 32%;
         height: auto;
         aspect-ratio: calc(443/841);
-        background-image: url("../img/top/dog-run_bg_img.png");
-        background-size: cover;
-        background-position: center;
+        background-color: $main-color1-down;
+        border-top-right-radius: 216px;
+        border-bottom-right-radius: 13px;
         z-index: -1;
 
         @media screen and (min-width: 1500px) {
             top: -40%;
+        }
+
+        @include media_query($pl3) {
+            top: -25%;
         }
 
         @include media_query($sm) {
@@ -576,9 +606,14 @@ ul {
         width: 16%;
         height: auto;
         aspect-ratio: calc(224/222);
-        background-image: url("../img/top/dog-run_bg_img_02.png");
+        background-image: url("../img/top/bg_img_01.png");
         background-size: cover;
         background-position: center;
+
+        @media screen and (min-width: 1500px) {
+            bottom: -25%;
+            left: 45%;
+        }
 
         @include media_query($sm) {
             width: 30%;
@@ -586,6 +621,417 @@ ul {
             background-position: left;
             bottom: 53%;
             left: 100%;
+        }
+    }
+}
+
+.pet-hotel_bg {
+    position: relative;
+
+    .pet-hotel {
+        width: 100%;
+        max-width: 1080px;
+        padding: 0 40px;
+        margin: 262px auto 0;
+
+        @include media_query($sm) {
+            padding: 0 20px;
+            margin: 145px auto 0;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            @include media_query($sm) {
+                display: block;
+            }
+
+            .pet-hotel_img {
+                position: relative;
+                aspect-ratio: calc(683/454);
+                width: 68%;
+                margin-right: calc(50% - 50vw);
+
+                @media screen and (min-width: 1500px) {
+                    width: 80%;
+                }
+
+                @include media_query(1230) {
+                    width: 60%;
+                }
+
+                @include media_query(780) {
+                    width: 58%;
+                }
+
+                @include media_query($sm) {
+                    aspect-ratio: calc(321/213);
+                    width: 100%;
+                    margin-right: 0;
+                    z-index: -1;
+                }
+            }
+
+            .wrap {
+
+                .title {
+                    display: flex;
+                    align-items: center;
+
+                    @include media_query($pl3) {
+                        display: block;
+                    }
+
+                    @include media_query($sm) {
+                        display: block;
+                        margin-top: -30px;
+                        text-align: end;
+                    }
+
+                    p {
+                        font-size: rem(17);
+                        color: $text-color3;
+                        margin-bottom: -10px;
+                        margin-left: 40px;
+
+                        @include media_query($pl3) {
+                            margin-left: 0px;
+                        }
+
+
+                        @include media_query($sm) {
+                            font-size: rem(13);
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+
+                >p {
+                    line-height: 2;
+                    margin-top: 48px;
+
+                    @include media_query($sm) {
+                        margin: 42px 0 0 10%;
+                    }
+
+                    @include media_query($pl1) {
+                        font-size: rem(15);
+                        margin-left: 0;
+
+                    }
+
+                    .sp {
+                        display: none;
+
+                        @include media_query($lg) {
+                            display: block;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .btn {
+            aspect-ratio: calc(332/79);
+            width: 60%;
+            position: relative;
+            margin-top: 80px;
+
+            @include media_query($pl3) {
+                margin-top: 30px;
+            }
+
+            @include media_query($sm) {
+                width: 100%;
+                margin: 47px auto 0;
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -55%;
+        right: 0;
+        width: 37%;
+        height: auto;
+        aspect-ratio: calc(517/832);
+        background-color: $main-color1-down;
+        border-top-left-radius: 250px;
+        border-bottom-left-radius: 10px;
+        z-index: -1;
+
+        @media screen and (min-width: 1500px) {
+            width: 32%;
+
+        }
+
+        @include media_query($lg) {
+            top: -20%;
+        }
+
+        @include media_query($pl3) {
+            top: -10%;
+        }
+
+
+        @include media_query($sm) {
+            width: 75%;
+            aspect-ratio: calc(270/388);
+            border-top-left-radius: 135px;
+            top: -5%;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -35%;
+        left: 55%;
+        width: 16%;
+        height: auto;
+        aspect-ratio: calc(224/222);
+        background-image: url("../img/top/bg_img_01.png");
+        background-size: cover;
+        background-position: center;
+
+        @media screen and (min-width: 1500px) {
+            bottom: -40%;
+            left: 60%;
+        }
+
+        @include media_query($lg) {
+            bottom: -0%;
+        }
+
+        @include media_query($sm) {
+            width: 30%;
+            aspect-ratio: calc(106/130);
+            background-position: right;
+            bottom: 55%;
+            left: 0%;
+            z-index: -1;
+        }
+    }
+}
+
+
+.trimming_bg {
+    position: relative;
+
+    .trimming {
+        width: 100%;
+        max-width: 1080px;
+        padding: 0 40px;
+        margin: 251px auto 0;
+
+        @include media_query($sm) {
+            padding: 0 20px;
+            margin: 137px auto 0;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+
+            @media screen and (min-width: 1500px) {
+                justify-content: space-between;
+            }
+
+            @include media_query($sm) {
+                display: block;
+            }
+
+            .trimming_img {
+                position: relative;
+                aspect-ratio: calc(600/500);
+                width: 60%;
+                margin-left: calc(50% - 50vw);
+
+                @media screen and (min-width: 1500px) {
+                    width: 75%;
+                }
+
+                @include media_query($pl3) {
+                    width: 50%;
+                }
+
+                @include media_query($sm) {
+                    aspect-ratio: calc(320/266);
+                    width: 100%;
+                    margin-left: 0;
+                    z-index: -1;
+                }
+            }
+
+            .wrap {
+                padding-left: 83px;
+
+                @include media_query($lg) {
+                    padding-left: 40px;
+                }
+
+                @include media_query($sm) {
+                    padding-left: 0px;
+                }
+
+                .title {
+                    display: flex;
+                    align-items: center;
+
+
+
+                    @include media_query($lg) {
+                        display: block;
+                        margin-top: -30px;
+                    }
+
+                    h2 {
+                        @include media_query($pl3) {
+                            font-size: rem(40);
+                        }
+                    }
+
+                    p {
+                        font-size: rem(17);
+                        color: $text-color3;
+                        margin-bottom: -10px;
+                        margin-left: 40px;
+
+                        @include media_query($sm) {
+                            font-size: rem(13);
+                            margin-bottom: 0px;
+                            margin-left: 0px;
+                        }
+                    }
+                }
+
+                >p {
+                    line-height: 2;
+                    margin-top: 48px;
+
+                    @include media_query($pl3) {
+                        font-size: rem(15);
+                        margin-top: 20px;
+                    }
+
+                    @include media_query($sm) {
+                        font-size: rem(15);
+                        margin-top: 40px;
+                    }
+
+                    .sp {
+                        display: none;
+
+                        @include media_query($lg) {
+                            display: block;
+                        }
+                    }
+
+                    .sp_none {
+                        display: block;
+
+                        @include media_query($lg) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            aspect-ratio: calc(332/79);
+            width: 80%;
+            position: relative;
+            margin-top: 80px;
+
+            @include media_query($pl3) {
+                margin-top: 30px;
+
+            }
+
+            @include media_query($sm) {
+                width: 100%;
+                position: relative;
+                margin: 48px auto 0;
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -40%;
+        left: 0;
+        width: 32%;
+        height: auto;
+        aspect-ratio: calc(381/566);
+        background-color: $main-color1-down;
+        border-top-right-radius: 190px;
+        border-bottom-right-radius: 13px;
+        z-index: -1;
+
+        @media screen and (min-width: 1500px) {
+            top: -40%;
+        }
+
+        @include media_query($pl3) {
+            top: -25%;
+        }
+
+        @include media_query($sm) {
+            width: 80%;
+            aspect-ratio: calc(270/430);
+            background-color: $main-color1-down;
+            border-top-right-radius: 138px;
+            top: -8%;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -70%;
+        left: 0%;
+        width: 27%;
+        height: auto;
+        aspect-ratio: calc(375/437);
+        background-image: url("../img/top/bg_img_02.png");
+        background-size: cover;
+        background-position: center;
+
+
+
+        @include media_query($xl) {
+            bottom: -60%;
+        }
+
+
+        @include media_query($lg) {
+            bottom: -40%;
+        }
+
+        @include media_query($pl3) {
+            bottom: -30%;
+        }
+
+
+        @include media_query($sm) {
+            background-image: url("../img/top/bg_img_01.png");
+            width: 30%;
+            aspect-ratio: calc(106/130);
+            background-position: left;
+            bottom: 53%;
+            left: auto;
+            right: 0;
         }
     }
 }
