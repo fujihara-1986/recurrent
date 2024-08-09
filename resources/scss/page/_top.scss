@@ -8,43 +8,54 @@ ul {
     list-style: none;
 }
 
+.title {
+    h2 {
+        font-size: rem(50);
+        font-family: $font-poppin;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: rem(17);
+    }
+
+}
+
+
+
 .fv {
     position: relative;
 
-    .flex {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
+    .insta {
+        width: 3%;
+        position: fixed;
+        aspect-ratio: calc(30/113);
+        margin: 185px 0 0 35px;
 
-
-        .insta {
-            width: 3%;
-            position: relative;
-            aspect-ratio: calc(30/113);
-            margin: 185px 0 0 35px;
-
-            &:hover {
-                opacity: 0.5;
-                cursor: pointer;
-            }
-
-            @include media_query($lg) {
-                margin: 120px 0 0 35px;
-            }
-
-            @include media_query($sm) {
-                display: none;
-            }
+        &:hover {
+            opacity: 0.5;
+            cursor: pointer;
         }
 
+        @include media_query($lg) {
+            margin: 120px 0 0 35px;
+        }
 
-        .kv {
+        @include media_query($sm) {
+            display: none;
+        }
+    }
+
+    .kv {
+        position: relative;
+
+        .kv_img {
             width: 90%;
             position: relative;
             aspect-ratio: calc(1250/595);
             border-bottom-left-radius: 250px;
             overflow: hidden;
+            margin: 0 0 0 auto;
 
             @include media_query($sm) {
                 aspect-ratio: calc(360/536);
@@ -81,12 +92,12 @@ ul {
                 left: 50px;
             }
 
-            @include media_query(600) {
+            @include media_query($pl2) {
                 bottom: 0px;
                 left: 20px;
             }
 
-            @include media_query(450) {
+            @include media_query($pl1) {
                 bottom: -19px;
                 left: 20px;
             }
@@ -99,7 +110,7 @@ ul {
                     line-height: 1.6;
                 }
 
-                @include media_query(450) {
+                @include media_query($pl1) {
                     font-size: rem(12);
                     line-height: 1.6;
                 }
@@ -233,18 +244,19 @@ ul {
 
 }
 
-.sec {
+.news_bg {
+    position: relative;
 
     .news {
         position: relative;
         width: 100%;
         max-width: 1080px;
         padding: 0 40px;
-        margin: 227px auto;
+        margin: 227px auto 0;
 
         @include media_query($sm) {
             padding: 0 20px;
-            margin: 90px auto;
+            margin: 90px auto 0;
         }
 
         .title {
@@ -258,16 +270,8 @@ ul {
             }
 
             h2 {
-                font-size: rem(50);
-                font-family: $font-poppin;
-                font-weight: 600;
                 color: $main-color2;
             }
-
-            p {
-                font-size: rem(17);
-            }
-
         }
 
         ul {
@@ -316,28 +320,21 @@ ul {
         .btn {
             aspect-ratio: calc(332/79);
             width: 33%;
-            position: absolute;
-            right: 40px;
-            margin-top: 70px;
+            position: relative;
+            margin: 70px 0 0 auto;
 
             @include media_query($sm) {
                 width: 100%;
-                position: relative;
-                right: 0;
-                margin: 39px auto 0;
+                margin-top: 39px;
             }
         }
-
-
-
     }
 
     &::after {
         content: "";
         display: block;
         position: absolute;
-        top: 60%;
-        transform: translateY(100%);
+        top: 45%;
         width: 30%;
         height: auto;
         aspect-ratio: calc(418/433);
@@ -350,7 +347,245 @@ ul {
             width: 52%;
             aspect-ratio: calc(188/195);
             position: absolute;
-            top: 79%;
+            top: 82%;
+        }
+    }
+}
+
+.concept_bg {
+    position: relative;
+    overflow: hidden;
+
+    .concept {
+        width: 100%;
+        max-width: 1080px;
+        padding: 0 40px;
+        margin: 192px auto 0;
+
+        @include media_query($sm) {
+            padding: 0 20px;
+            margin: 80px auto 0;
+        }
+
+        .title {
+            text-align: center;
+
+            h2 {
+
+                color: $main-color2;
+            }
+        }
+
+        >p {
+            text-align: center;
+            line-height: 2;
+            margin-top: 83px;
+
+            @include media_query($sm) {
+                font-size: rem(15);
+                margin-top: 42px;
+            }
+
+            .sp {
+                display: none;
+
+                @include media_query($sm) {
+                    display: block;
+                }
+            }
+        }
+
+        .btn {
+            aspect-ratio: calc(332/79);
+            width: 33%;
+            position: relative;
+            margin: 80px auto 0;
+
+            @include media_query($sm) {
+                width: 100%;
+                margin-top: 48px;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        width: 21%;
+        height: auto;
+        aspect-ratio: calc(291/428);
+        background-image: url("../img/top/concept_bg_img.png");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+
+        @include media_query($sm) {
+            width: 50%;
+            aspect-ratio: calc(180/265);
+            top: 35%;
+            right: -10%;
+        }
+    }
+}
+
+.dog-run_bg {
+    position: relative;
+
+    .dog-run {
+        width: 100%;
+        max-width: 1080px;
+        padding: 0 40px;
+        margin: 251px auto 0;
+
+        @include media_query($sm) {
+            padding: 0 20px;
+            margin: 137px auto 0;
+        }
+
+        .flex {
+            display: flex;
+
+            @media screen and (min-width: 1500px) {
+                justify-content: space-between;
+            }
+
+            @include media_query($sm) {
+                display: block;
+            }
+
+            .dog-run_img {
+                position: relative;
+                aspect-ratio: calc(600/500);
+                width: 60%;
+                margin-left: calc(50% - 50vw);
+
+                @media screen and (min-width: 1500px) {
+                    width: 100%;
+                }
+
+                @include media_query($sm) {
+                    aspect-ratio: calc(320/266);
+                    width: 100%;
+                    margin-left: 0;
+                    z-index: -1;
+                }
+            }
+
+            .wrap {
+                padding-left: 83px;
+
+                @include media_query($sm) {
+                    padding-left: 0px;
+                }
+
+                .title {
+                    display: flex;
+                    align-items: center;
+
+                    @include media_query($sm) {
+                        display: block;
+                        margin-top: -30px;
+                    }
+
+                    p {
+                        font-size: rem(17);
+                        color: $text-color3;
+                        margin-bottom: -10px;
+                        margin-left: 40px;
+
+                        @include media_query($sm) {
+                            font-size: rem(13);
+                            margin-bottom: 0px;
+                            margin-left: 0px;
+                        }
+                    }
+                }
+
+                >p {
+                    line-height: 2;
+                    margin-top: 48px;
+
+                    @include media_query($sm) {
+                        font-size: rem(15);
+                        margin-top: 40px;
+                    }
+
+                    .sp {
+                        display: none;
+
+                        @include media_query($sm) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            aspect-ratio: calc(332/79);
+            width: 80%;
+            position: relative;
+            margin-top: 80px;
+
+            @include media_query($sm) {
+                width: 100%;
+                position: relative;
+                margin: 48px auto 0;
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -50%;
+        left: 0;
+        width: 32%;
+        height: auto;
+        aspect-ratio: calc(443/841);
+        background-image: url("../img/top/dog-run_bg_img.png");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+
+        @media screen and (min-width: 1500px) {
+            top: -40%;
+        }
+
+        @include media_query($sm) {
+            width: 80%;
+            aspect-ratio: calc(270/430);
+            background-color: $main-color1-down;
+            border-top-right-radius: 138px;
+            border-bottom-right-radius: 13px;
+            top: -8%;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -15%;
+        left: 50%;
+        transform: translateX(-100%);
+        width: 16%;
+        height: auto;
+        aspect-ratio: calc(224/222);
+        background-image: url("../img/top/dog-run_bg_img_02.png");
+        background-size: cover;
+        background-position: center;
+
+        @include media_query($sm) {
+            width: 30%;
+            aspect-ratio: calc(106/130);
+            background-position: left;
+            bottom: 53%;
+            left: 100%;
         }
     }
 }
