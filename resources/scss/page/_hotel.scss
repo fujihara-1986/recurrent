@@ -316,14 +316,14 @@ body {
       }
     }
     .features_list {
-      margin-top: rem(50);
-      padding: rem(28);
+      margin: rem(50) 0;
+      padding: rem(20) rem(28);
       background-color: $main-color1-down;
       border-radius: rem(25);
       @include media_query($sm) {
         padding: rem(14);
         max-width: 500px;
-        margin: rem(50) auto auto;
+        margin: rem(50) auto;
       }
       ul {
         background-color: #fff;
@@ -378,6 +378,75 @@ body {
             }
           }
         }
+      }
+    }
+    .explanatory_text_area {
+      letter-spacing: rem(3);
+      line-height: rem(30);
+      text-align: center;
+      @include media_query($sm) {
+        padding: 0 rem(10);
+        margin: 0 auto;
+        letter-spacing: rem(2);
+        text-align: left;
+      }
+      .explanatory_text {
+        text-align: center;
+        font-size: rem(15);
+        @include media_query($sm) {
+          font-size: rem(14);
+        }
+      }
+      .cautionary_note {
+        font-size: rem(12);
+        @include media_query($sm) {
+          font-size: rem(11);
+        }
+      }
+    }
+  }
+  .dog_list_wrap {
+    margin-top: rem(100);
+    .dog_list {
+      background-color: $main-color1-down;
+      margin-left: rem(100);
+      padding: rem(30);
+      border-top-left-radius: rem(100);
+      ul {
+        display: flex;
+        justify-content: center;
+        .dog_img_wrap {
+          padding: rem(30) rem(40);
+          .dog_img {
+            position: relative;
+            aspect-ratio: calc(250 / 190);
+            height: 190px;
+          }
+          .dog_text {
+            text-align: center;
+            color: $main-color1-up;
+            font-size: rem(18);
+            span {
+              text-align: center;
+              padding: rem(10) rem(20);
+              background-image: url(/common/svg/hotel/paws.svg);
+              background-repeat: no-repeat;
+            }
+          }
+          .dog_text_2 {
+            font-size: rem(12);
+          }
+        }
+      }
+    }
+    .dotted_circle2 {
+      position: relative;
+      max-width: rem(154);
+      aspect-ratio: calc(154 / 279);
+      margin-top: rem(-80);
+      @include media_query($sm) {
+        max-width: rem(170);
+        margin-top: rem(30);
       }
     }
   }
